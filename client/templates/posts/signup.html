@@ -1,0 +1,28 @@
+<template name="signup">
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr>
+					<th class="col-sm-3">Time</th>
+					<th class="col-sm-3">Monday</th>
+					<th class="col-sm-3">Tuesday</th>
+					<th class="col-sm-3">Wednesday</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each slots}}
+					{{> slot}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>	
+
+<template name="slot">
+	<tr>
+		<td class="col-sm-3">{{this}}</td>
+		<td class="col-sm-3 slot"></td>
+		<td class="col-sm-3 slot"></td>
+		<td class="col-sm-3 slot"></td>
+	</tr>
+</template>
