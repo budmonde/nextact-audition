@@ -1,10 +1,4 @@
-<template name="signup">
-	<div class="row">
-		<div class="col-sm-12">
-			<h2>Instructions</h2>
-			<p>Please sign up with your email before picking a slot for auditions. Clicking on a blank slot will sign you up for that slot. Slots which are red are already taken.</p>
-		</div>
-	</div>
+<template name="admin">
 	<div class="table-responsive">
 		<table class="table table-bordered table-hover">
 			<thead>
@@ -17,22 +11,22 @@
 			</thead>
 			<tbody>
 				{{#each slots}}
-					{{> slot}}
+					{{> adminslot}}
 				{{/each}}
 			</tbody>
 		</table>
 	</div>
 </template>	
 
-<template name="slot">
+<template name="adminslot">
 	<tr id="{{row}}">
 		<td class="col-sm-3">{{this}}</td>
 		{{#each days}}
-			{{> day}}
+			{{> adminday}}
 		{{/each}}
 	</tr>
 </template>
 
-<template name="day">
-	<td class="col-sm-3 slot {{isTaken ..}}" id="{{col}}{{row ..}}"></td>
+<template name="adminday">
+	<td class="col-sm-3 slot" id="{{col}}{{row ..}}">{{ email ..}}</td>
 </template>
